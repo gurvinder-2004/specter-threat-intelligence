@@ -1,4 +1,4 @@
-# ⚡ SPECTER x AEGIS
+#  SPECTER x AEGIS
 
 <div align="center">
 
@@ -22,7 +22,7 @@
 
 ---
 
-## 📌 Executive Summary
+##  Executive Summary
 
 Modern Security Operations Centers (SOCs) face two critical challenges:
 1. **Threat Intelligence Overload & Stale IOCs**: Traditional threat feeds ingest thousands of indicators of compromise (IOCs) without contextual graph relationships or confidence degradation over time, leading to alert fatigue and obsolete blocklists.
@@ -34,7 +34,7 @@ Modern Security Operations Centers (SOCs) face two critical challenges:
 
 ---
 
-## 🏛️ Architecture
+##  Architecture
 
 ```mermaid
 flowchart TD
@@ -91,7 +91,7 @@ flowchart TD
 
 ---
 
-## 🔬 Core Components
+##  Core Components
 
 ### 1. SPECTER — Cyber Threat Intelligence & SOAR
 * **Unstructured & Structured Ingestion**: Extracts IPv4, IPv6, MD5, SHA256, domains, URLs, CVEs, and email addresses from raw text, Mandiant/CISA PDF bulletins, AlienVault OTX pulses, and Cowrie honeypots.
@@ -115,7 +115,7 @@ flowchart TD
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - [Docker](https://www.docker.com/) & Docker Compose
@@ -229,7 +229,7 @@ options:
 
 ---
 
-## 📡 API Reference
+##  API Reference
 
 ### Core Ingestion & Threat Graph
 | Method | Endpoint | Description |
@@ -264,7 +264,7 @@ options:
 
 ---
 
-## 📊 Research & Empirical Validation
+##  Research & Empirical Validation
 
 AEGIS includes evaluation utilities for academic and security benchmarking:
 
@@ -280,7 +280,7 @@ Outputs:
 
 ---
 
-## 🔒 Security Best Practices & Repository Safety
+##  Security Best Practices & Repository Safety
 
 - **No Secrets in Version Control**: All API tokens, webhook URLs, and private keys must be stored strictly in `.env`. The provided `.gitignore` automatically prevents `.env`, Python virtual environments (`venv/`), Node modules (`node_modules/`), and forensic dumps (`evidence/`) from ever being committed.
 - **Malware Handling**: Live ransomware experiments must strictly be performed in an offline, Host-Only virtualized sandbox.
