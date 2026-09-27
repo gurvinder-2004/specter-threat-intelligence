@@ -1,0 +1,109 @@
+services:
+  neo4j:
+    image: neo4j:5.13
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      NEO4J_AUTH: neo4j/specter_pass
+      NEO4J_PLUGINS: '["apoc"]'
+      NEO4J_dbms_security_procedures_unrestricted: apoc.*
+    volumes:
+      - neo4j_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://localhost:7474 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+      start_period: 30s
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      retries: 10
+
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    env_file: .env
+    depends_on:
+      neo4j:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    restart: on-failure
+
+  celery_worker:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    env_file: .env
+    depends_on:
+      redis:
+        condition: service_healthy
+      neo4j:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+    command: celery -A decay.celery_app:celery_app worker --beat --loglevel=info
+    restart: on-failure
+# ─────────────────────────────────────────────────────────────────────────────
+# SPECTER — Cowrie Honeypot Extension
+# Add this to your EXISTING docker-compose.yml under `services:`
+#
+# Your current docker-compose.yml ends with:
+#   volumes:
+#     neo4j_data:
+#
+# PASTE the cowrie service block BEFORE that volumes: section.
+# ─────────────────────────────────────────────────────────────────────────────
+
+  cowrie:
+    image: cowrie/cowrie:latest
+    container_name: specter_cowrie
+    ports:
+      - "2222:2222"    # Fake SSH (real SSH stays on 22)
+      - "2223:2223"    # Fake Telnet
+    volumes:
+      - ./cowrie_logs:/cowrie/var/log/cowrie   # logs appear here on your host
+      - ./cowrie.cfg:/cowrie/etc/cowrie.cfg    # optional custom config
+    environment:
+      - COWRIE_TELNET_ENABLED=yes
+    restart: unless-stopped
+
+  # ── Cowrie Log Watcher ────────────────────────────────────────────────────
+  # This tiny sidecar watches cowrie.json and auto-ingests attacker IPs
+  # into SPECTER the moment they appear. No manual refresh needed.
+  cowrie_watcher:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: specter_cowrie_watcher
+    env_file: .env
+    depends_on:
+      - cowrie
+      - api
+    volumes:
+      - ./backend:/app
+      - ./cowrie_logs:/cowrie_logs:ro    # read-only access to cowrie logs
+    command: python honeypot/watcher.py
+    restart: unless-stopped
+
+# ─────────────────────────────────────────────────────────────────────────────
+# After adding the above, run:
+#   mkdir -p cowrie_logs
+#   docker-compose up -d cowrie cowrie_watcher
+# ─────────────────────────────────────────────────────────────────────────────
+
+volumes:
+  neo4j_data:

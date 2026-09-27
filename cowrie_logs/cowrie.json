@@ -1,0 +1,40 @@
+{"eventid": "cowrie.login.failed", "timestamp": "2026-05-26T11:08:23.133330Z", "src_ip": "45.249.198.175", "session": "specter90004380", "username": "root", "password": "root", "sensor": "specter-demo"}
+{"eventid": "cowrie.login.failed", "timestamp": "2026-05-26T11:08:23.133330Z", "src_ip": "45.249.198.175", "session": "specter90004380", "username": "admin", "password": "admin", "sensor": "specter-demo"}
+{"eventid": "cowrie.login.failed", "timestamp": "2026-05-26T11:08:23.133330Z", "src_ip": "45.249.198.175", "session": "specter90004380", "username": "root", "password": "123456", "sensor": "specter-demo"}
+{"eventid": "cowrie.login.success", "timestamp": "2026-05-26T11:08:23.133330Z", "src_ip": "45.249.198.175", "session": "specter90004380", "username": "root", "password": "admin"}
+{"eventid": "cowrie.command.input", "timestamp": "2026-05-26T11:08:23.133330Z", "src_ip": "45.249.198.175", "session": "specter90004380", "input": "uname -a"}
+{"eventid": "cowrie.command.input", "timestamp": "2026-05-26T11:08:23.133330Z", "src_ip": "45.249.198.175", "session": "specter90004380", "input": "id"}
+{"eventid": "cowrie.command.input", "timestamp": "2026-05-26T11:08:23.133330Z", "src_ip": "45.249.198.175", "session": "specter90004380", "input": "whoami"}
+{"eventid": "cowrie.session.file_download", "timestamp": "2026-05-26T11:08:23.133330Z", "src_ip": "45.249.198.175", "session": "specter90004380", "url": "http://45.227.254.124/payload.sh", "outfile": "/tmp/.update"}
+{"eventid": "cowrie.login.failed", "timestamp": "2026-05-27T10:17:38.708498Z", "src_ip": "45.218.191.101", "session": "specter17748624", "username": "root", "password": "root", "sensor": "specter-demo"}
+{"eventid": "cowrie.login.failed", "timestamp": "2026-05-27T10:17:38.708498Z", "src_ip": "45.218.191.101", "session": "specter17748624", "username": "admin", "password": "admin", "sensor": "specter-demo"}
+{"eventid": "cowrie.login.failed", "timestamp": "2026-05-27T10:17:38.708498Z", "src_ip": "45.218.191.101", "session": "specter17748624", "username": "root", "password": "123456", "sensor": "specter-demo"}
+{"eventid": "cowrie.login.success", "timestamp": "2026-05-27T10:17:38.708498Z", "src_ip": "45.218.191.101", "session": "specter17748624", "username": "root", "password": "admin"}
+{"eventid": "cowrie.command.input", "timestamp": "2026-05-27T10:17:38.708498Z", "src_ip": "45.218.191.101", "session": "specter17748624", "input": "uname -a"}
+{"eventid": "cowrie.command.input", "timestamp": "2026-05-27T10:17:38.708498Z", "src_ip": "45.218.191.101", "session": "specter17748624", "input": "id"}
+{"eventid": "cowrie.command.input", "timestamp": "2026-05-27T10:17:38.708498Z", "src_ip": "45.218.191.101", "session": "specter17748624", "input": "whoami"}
+{"eventid": "cowrie.session.file_download", "timestamp": "2026-05-27T10:17:38.708498Z", "src_ip": "45.218.191.101", "session": "specter17748624", "url": "http://45.227.254.124/payload.sh", "outfile": "/tmp/.update"}
+{"eventid": "cowrie.login.failed", "timestamp": "2026-05-29T08:31:31.728025Z", "src_ip": "45.248.190.38", "session": "specter54172301", "username": "root", "password": "root", "sensor": "specter-demo"}
+{"eventid": "cowrie.login.failed", "timestamp": "2026-05-29T08:31:31.728025Z", "src_ip": "45.248.190.38", "session": "specter54172301", "username": "admin", "password": "admin", "sensor": "specter-demo"}
+{"eventid": "cowrie.login.failed", "timestamp": "2026-05-29T08:31:31.728025Z", "src_ip": "45.248.190.38", "session": "specter54172301", "username": "root", "password": "123456", "sensor": "specter-demo"}
+{"eventid": "cowrie.login.success", "timestamp": "2026-05-29T08:31:31.728025Z", "src_ip": "45.248.190.38", "session": "specter54172301", "username": "root", "password": "admin"}
+{"eventid": "cowrie.command.input", "timestamp": "2026-05-29T08:31:31.728025Z", "src_ip": "45.248.190.38", "session": "specter54172301", "input": "uname -a"}
+{"eventid": "cowrie.command.input", "timestamp": "2026-05-29T08:31:31.728025Z", "src_ip": "45.248.190.38", "session": "specter54172301", "input": "id"}
+{"eventid": "cowrie.command.input", "timestamp": "2026-05-29T08:31:31.728025Z", "src_ip": "45.248.190.38", "session": "specter54172301", "input": "whoami"}
+{"eventid": "cowrie.session.file_download", "timestamp": "2026-05-29T08:31:31.728025Z", "src_ip": "45.248.190.38", "session": "specter54172301", "url": "http://45.227.254.124/payload.sh", "outfile": "/tmp/.update"}
+{"eventid": "cowrie.login.failed", "timestamp": "2026-05-29T09:25:14.718579Z", "src_ip": "45.238.173.191", "session": "specter62504163", "username": "root", "password": "root", "sensor": "specter-demo"}
+{"eventid": "cowrie.login.failed", "timestamp": "2026-05-29T09:25:14.718579Z", "src_ip": "45.238.173.191", "session": "specter62504163", "username": "admin", "password": "admin", "sensor": "specter-demo"}
+{"eventid": "cowrie.login.failed", "timestamp": "2026-05-29T09:25:14.718579Z", "src_ip": "45.238.173.191", "session": "specter62504163", "username": "root", "password": "123456", "sensor": "specter-demo"}
+{"eventid": "cowrie.login.success", "timestamp": "2026-05-29T09:25:14.718579Z", "src_ip": "45.238.173.191", "session": "specter62504163", "username": "root", "password": "admin"}
+{"eventid": "cowrie.command.input", "timestamp": "2026-05-29T09:25:14.718579Z", "src_ip": "45.238.173.191", "session": "specter62504163", "input": "uname -a"}
+{"eventid": "cowrie.command.input", "timestamp": "2026-05-29T09:25:14.718579Z", "src_ip": "45.238.173.191", "session": "specter62504163", "input": "id"}
+{"eventid": "cowrie.command.input", "timestamp": "2026-05-29T09:25:14.718579Z", "src_ip": "45.238.173.191", "session": "specter62504163", "input": "whoami"}
+{"eventid": "cowrie.session.file_download", "timestamp": "2026-05-29T09:25:14.718579Z", "src_ip": "45.238.173.191", "session": "specter62504163", "url": "http://45.227.254.124/payload.sh", "outfile": "/tmp/.update"}
+{"eventid": "cowrie.login.failed", "timestamp": "2026-05-29T11:18:55.904075Z", "src_ip": "45.247.169.128", "session": "specter67842201", "username": "root", "password": "root", "sensor": "specter-demo"}
+{"eventid": "cowrie.login.failed", "timestamp": "2026-05-29T11:18:55.904075Z", "src_ip": "45.247.169.128", "session": "specter67842201", "username": "admin", "password": "admin", "sensor": "specter-demo"}
+{"eventid": "cowrie.login.failed", "timestamp": "2026-05-29T11:18:55.904075Z", "src_ip": "45.247.169.128", "session": "specter67842201", "username": "root", "password": "123456", "sensor": "specter-demo"}
+{"eventid": "cowrie.login.success", "timestamp": "2026-05-29T11:18:55.904075Z", "src_ip": "45.247.169.128", "session": "specter67842201", "username": "root", "password": "admin"}
+{"eventid": "cowrie.command.input", "timestamp": "2026-05-29T11:18:55.904075Z", "src_ip": "45.247.169.128", "session": "specter67842201", "input": "uname -a"}
+{"eventid": "cowrie.command.input", "timestamp": "2026-05-29T11:18:55.904075Z", "src_ip": "45.247.169.128", "session": "specter67842201", "input": "id"}
+{"eventid": "cowrie.command.input", "timestamp": "2026-05-29T11:18:55.904075Z", "src_ip": "45.247.169.128", "session": "specter67842201", "input": "whoami"}
+{"eventid": "cowrie.session.file_download", "timestamp": "2026-05-29T11:18:55.904075Z", "src_ip": "45.247.169.128", "session": "specter67842201", "url": "http://45.227.254.124/payload.sh", "outfile": "/tmp/.update"}

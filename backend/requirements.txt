@@ -1,0 +1,38 @@
+# API
+fastapi==0.111.0
+uvicorn[standard]==0.30.0
+python-multipart==0.0.9
+
+# Graph
+neo4j==5.20.0
+
+# Task queue
+celery[redis]==5.4.0
+redis==5.0.4
+
+# NLP
+spacy==3.8
+# run: python -m spacy download en_core_web_trf
+
+# PDF parsing
+pdfplumber==0.11.0
+
+# HTTP
+httpx==0.27.0
+requests==2.32.3
+feedparser==6.0.11
+
+# LLM
+groq==0.9.0
+ollama==0.3.1
+
+# Validation
+pydantic==2.7.1
+pydantic-settings==2.3.1
+
+# Utils
+python-dotenv==1.0.1
+loguru==0.7.2
+
+
+PyNaCl==1.5.0
